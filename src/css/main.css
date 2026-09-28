@@ -4,143 +4,191 @@
 
 body {
   margin: 0;
+  background: #f5f2eb;
   font-family: Arial, sans-serif;
+  font-size: 16px;
 }
 
-/* Grande zone qui donne de la longueur au scroll */
-.story {
-  height: 500vh;
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: #222;
+}
+/* -----------------
+   SCROLL
+----------------- */
+
+main {
+  height: 565vh;
 }
 
-/* Écran qui reste fixe */
+/* -----------------
+   SCENE
+----------------- */
+.Group {
+  max-width: 1500vh;
+}
+
 .scene {
-  position: sticky;
+  position: relative;
   top: 0;
   height: 100vh;
   overflow: hidden;
-  background: #f5f2eb;
 }
 
-/* Texte */
+/* -----------------
+   TEXTE
+----------------- */
+
 .text {
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 5%;
+  opacity: 1;
   z-index: 10;
 }
 
-.text p {
-  margin: 0;
-  font-size: 24px;
+/* -----------------
+   POINTS
+----------------- */
+
+.dot {
+  opacity: 1;
+  transform: scale(0);
+  position: absolute;
+  border-radius: 50%;
 }
 
-/* Zone de création */
-.composition {
-  position: absolute;
-  width: 600px;
-  height: 400px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Le trait */
-.line {
-  position: absolute;
-  width: 500px;
-  height: 3px;
-  background: #222;
-  top: 200px;
-  left: 50px;
-  transform-origin: left;
-  transform: scaleX(0);
-}
-
-/* Le point */
-.point {
-  position: absolute;
+.dot1 {
   width: 20px;
   height: 20px;
-  background: #222;
-  border-radius: 50%;
-  left: 50px;
-  top: 190px;
+
+  left: 50%;
+  top: 50%;
+  background: rgb(227, 73, 50);
 }
 
-/* Éléments qui apparaissent */
-.element {
-  position: absolute;
-  opacity: 0;
-  transform: scale(0.5);
+.dot2 {
+  left: 65%;
+  top: 50%;
+  width: 55px;
+  height: 55px;
+  background: #7ca7ca;
 }
 
-.circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.dot3 {
+  left: 75%;
+  top: 38%;
+  background: #e8b52d;
 }
 
-.blue {
+.dot4 {
+  left: 58%;
+  top: 49%;
+  width: 145px;
+  height: 145px;
+  background: #e8b52d;
+}
+
+.dot5 {
+  left: 72%;
+  top: 42%;
+  width: 45px;
+  height: 45px;
+  background: #e87955;
+}
+
+.dot6 {
+  left: 42%;
+  top: 62%;
+  width: 12px;
+  height: 12px;
   background: #2f6fa3;
 }
 
-.yellow {
-  background: #e9b52f;
+.dot7 {
+  left: 63%;
+  top: 68%;
+  width: 95px;
+  height: 95px;
+  background: #4c8b68;
 }
 
-.green {
-  background: #4d8a68;
+.dot8 {
+  left: 38%;
+  top: 38%;
+  width: 85px;
+  height: 85px;
+  background: #fad8e0;
 }
 
-/* Quelques faux éléments graphiques */
-.element1 {
-  left: 180px;
-  top: 130px;
-}
+/* -----------------
+   LIGNE COURBEE
+----------------- */
 
-.element2 {
-  left: 320px;
-  top: 220px;
-}
-
-.element3 {
-  left: 400px;
-  top: 100px;
-}
-
-/* Images */
-.photo {
+.line {
   position: absolute;
-  width: 150px;
-  height: 120px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line path {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* -----------------
+   LIGNES ENTRE LES POINTS
+----------------- */
+
+.connections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.connection {
+  fill: none;
+  stroke: #222;
+  stroke-width: 2;
+}
+
+/* -----------------
+   FEUILLE
+----------------- */
+
+.feuille {
+  position: absolute;
+  width: 180px;
+  left: 45%;
+  top: 30%;
+  opacity: 0;
+}
+
+/* -----------------
+   PAYSAGES
+----------------- */
+
+.illustration {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.paysage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
   object-fit: cover;
   opacity: 0;
-}
-
-.photo1 {
-  left: 230px;
-  top: 100px;
-}
-
-.photo2 {
-  left: 350px;
-  top: 180px;
-}
-
-/* Message final */
-.final {
-  position: absolute;
-  bottom: 10%;
-  left: 10%;
-  opacity: 0;
-}
-
-.final h1 {
-  margin: 0 0 10px;
-  font-size: 40px;
-}
-
-.final p {
-  margin: 0;
-  font-size: 20px;
 }

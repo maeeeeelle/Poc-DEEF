@@ -4,43 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Carte de voeux - POC</title>
+    <title>POC</title>
 
     <link rel="stylesheet" href="./css/main.css" />
   </head>
 
   <body>
     <main>
-      <section class="scroll">
-        <div class="story">
-          <div class="scene">
-            <div class="text">
-              <p id="text">Tout commence par une idée.</p>
-            </div>
+      <section class="scene">
+        <h1 class="text">Tout commence par une idée.</h1>
 
-            <div class="composition">
-              <div class="point"></div>
+        <!-- Ligne courbée -->
+        <svg class="line" viewBox="0 0 1000 300">
+          <path d="M 0 150 C 250 20, 600 280, 1000 70"></path>
+        </svg>
 
-              <div class="line"></div>
+        <!-- Premier point -->
+        <div class="Group">
+          <div class="dot dot1"></div>
 
-              <div class="element circle blue element1"></div>
-              <div class="element circle yellow element2"></div>
-              <div class="element circle green element3"></div>
+          <!-- Autres points -->
+          <div class="dot dot2"></div>
+          <div class="dot dot3"></div>
+          <div class="dot dot4"></div>
+          <div class="dot dot5"></div>
+          <div class="dot dot6"></div>
+          <div class="dot dot7"></div>
+          <div class="dot dot8"></div>
+          <!-- Lignes entre les points -->
+          <!-- <svg class="connections" viewBox="0 0 1000 600">
+          <line
+            class="connection connection1"
+            x1="650"
+            y1="300"
+            x2="750"
+            y2="230"
+          ></line>
+          <line
+            class="connection connection2"
+            x1="750"
+            y1="230"
+            x2="800"
+            y2="240"
+          ></line>
+          <line
+            class="connection connection3"
+            x1="650"
+            y1="300"
+            x2="580"
+            y2="301"
+          ></line>
+          </svg> -->
 
-              <!-- Remplace ces images par tes propres images -->
-              <img class="photo photo1" src="images/image1.png" />
-              <img class="photo photo2" src="images/image2.png" />
-            </div>
-
-            <div class="final">
-              <h1>Continuons à faire naître les idées.</h1>
-              <p>Belle année 2026.</p>
-            </div>
+          <!-- Image -->
+          <img class="feuille" src="./images/feuille.png" alt="feuille" />
+          <div class="illustration">
+            <img
+              src="./images/image-paysage1.png"
+              class="paysage paysage1"
+              alt=""
+            />
+            <img
+              src="./images/image-paysage2.png"
+              class="paysage paysage2"
+              alt=""
+            />
+            <img
+              src="./images/image-paysage3.png"
+              class="paysage paysage3"
+              alt=""
+            />
+            <img
+              src="./images/image-paysage4.png"
+              class="paysage paysage4"
+              alt=""
+            />
           </div>
+        </div>
+      </section>
+      <section>
+        <div class="text-first">
+          <h2>Tout commence par une idée.</h2>
+          <p>
+            Nous vous souhaitons une année pleine d'idées, de projets et de
+            nouvelles possibilités.
+          </p>
+          <p>Belle année 2027.</p>
+        </div>
+        <div class="text-middle">
+          <!-- <img src="" alt="" /> -->
+          <!-- <p>Belle année 2027.</p>
+          <p>Belle année 2026.</p> -->
         </div>
       </section>
     </main>
 
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js"></script>
   </body>
 </html>
